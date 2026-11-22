@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="img" aria-label="Contoh Foto Full Body 4R Dummy">
+  <rect width="400" height="600" fill="#FBF6F0" />
+  <rect x="20" y="20" width="360" height="560" rx="16" fill="#FFFFFF" stroke="#DCC3AA" stroke-width="3" />
+  <rect x="44" y="42" width="312" height="44" rx="8" fill="#541A1A" fill-opacity="0.08" />
+  <text x="200" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#541A1A">FOTO FULL BODY 4R · DUMMY</text>
+  <circle cx="200" cy="158" r="34" fill="#E9C7B0" stroke="#810B38" stroke-width="2" />
+  <path d="M150 220c0-18 22-28 50-28s50 10 50 28l10 130H140l10-130z" fill="#810B38" />
+  <rect x="165" y="350" width="28" height="130" rx="10" fill="#541A1A" />
+  <rect x="207" y="350" width="28" height="130" rx="10" fill="#541A1A" />
+  <line x1="110" y1="490" x2="290" y2="490" stroke="#DCC3AA" stroke-width="3" stroke-linecap="round" />
+  <text x="200" y="544" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#76564E">Contoh Ilustratif Latar Putih · Bukan Dokumen Nyata</text>
+</svg>

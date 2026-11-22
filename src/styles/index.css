@@ -1,0 +1,202 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --color-cocoa: #541a1a;
+  --color-umber: #681f2b;
+  --color-brand: #810b38;
+  --color-brand-dark: #65082c;
+  --color-brick: #9b3156;
+  /* Existing accent names remain compatible; their colors now follow the beige palette. */
+  --color-gold: #dcc3aa;
+  --color-gold-light: #ebd5be;
+  --color-gold-dark: #765243;
+  --color-ivory: #f1e2d1;
+  --color-champagne: #dcc3aa;
+  --color-paper: #fbf6f0;
+  --color-canvas: #f1e2d1;
+  --color-ink: #541a1a;
+  --color-muted: #76564e;
+  --color-line: #dcc3aa;
+  --color-success: #42664b;
+  --color-danger: #9b314f;
+  --color-jajaka: #416787;
+}
+
+@layer base {
+  body {
+    min-width: 320px;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:not(:disabled),
+  a {
+    cursor: pointer;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 4px;
+  }
+  .bg-cocoa :is(button, a):focus-visible,
+  .bg-umber :is(button, a):focus-visible {
+    outline-color: var(--color-ivory);
+  }
+  ::selection {
+    background: var(--color-champagne);
+    color: var(--color-cocoa);
+  }
+  dialog {
+    color-scheme: light;
+  }
+  progress {
+    appearance: none;
+    overflow: hidden;
+    border: 0;
+    border-radius: var(--radius-lg);
+    background: var(--color-line);
+  }
+  progress::-webkit-progress-bar {
+    background: var(--color-line);
+  }
+  progress::-webkit-progress-value {
+    border-radius: var(--radius-lg);
+    background: var(--color-brand);
+  }
+  progress::-moz-progress-bar {
+    border-radius: var(--radius-lg);
+    background: var(--color-brand);
+  }
+}
+
+.moka-logo-mark {
+  background-image: var(--moka-logo-url, url('/images/logo-moka.png'));
+}
+.auth-form-side {
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      color-mix(in srgb, var(--color-ivory) 16%, transparent),
+      transparent 70%
+    ),
+    var(--color-paper);
+}
+.assistant-panel {
+  animation: panel-in 180ms ease-out;
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1024px) {
+  .auth-layout {
+    grid-template-columns: auto 1fr;
+    height: 100dvh;
+    min-height: 0;
+  }
+  .auth-cover {
+    height: 100dvh;
+    max-width: 50vw;
+    min-height: 0;
+  }
+  .auth-form-side {
+    min-height: 0;
+    overflow-y: auto;
+    padding-block: clamp(1.25rem, 3.5dvh, 3rem);
+  }
+  .auth-form-content {
+    padding-block: clamp(1rem, 3dvh, 2.5rem);
+  }
+  .auth-register .auth-form-content {
+    max-width: 28rem;
+  }
+  .auth-register .auth-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .auth-form {
+    margin-top: clamp(1rem, 2.5dvh, 2rem);
+    gap: clamp(0.75rem, 2dvh, 1.25rem);
+  }
+  .auth-form-title {
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+  }
+  .auth-register .auth-form-title {
+    font-size: clamp(1.75rem, 2.3vw, 2.25rem);
+  }
+  .auth-form-divider {
+    margin-block: clamp(1rem, 2.5dvh, 1.75rem);
+  }
+  .auth-access-note {
+    margin-top: clamp(0.75rem, 2dvh, 1.5rem);
+  }
+}
+@media (max-width: 1023px) {
+  .auth-cover {
+    display: none;
+  }
+  .auth-form-side {
+    min-height: 100dvh;
+  }
+}
+@media (max-width: 639px) {
+  body:has(.assistant-container) {
+    overflow: hidden;
+  }
+  body:has(.assistant-container) #root {
+    height: calc(100dvh - 76px);
+    overflow-y: auto;
+  }
+  .assistant-container {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    height: 76px;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid var(--color-line);
+    background: var(--color-paper);
+    padding: 12px 16px;
+  }
+  .assistant-panel {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    border-radius: 0;
+    margin: 0;
+  }
+  .assistant-trigger {
+    min-height: 48px !important;
+    padding: 0 16px !important;
+  }
+  .auth-form-content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .auth-form-side footer {
+    padding-bottom: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

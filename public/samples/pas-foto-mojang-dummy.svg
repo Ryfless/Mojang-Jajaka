@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="img" aria-label="Contoh Pas Foto 4x6 Mojang Dummy">
+  <rect width="400" height="600" fill="#FBF6F0" />
+  <rect x="20" y="20" width="360" height="560" rx="16" fill="#FFFFFF" stroke="#DCC3AA" stroke-width="3" />
+  <circle cx="200" cy="215" r="78" fill="#F1E2D1" stroke="#810B38" stroke-width="2" />
+  <path d="M135 205c0-48 29-80 65-80s65 32 65 80c-12-26-34-40-65-40s-53 14-65 40z" fill="#541A1A" />
+  <circle cx="200" cy="210" r="46" fill="#E9C7B0" />
+  <path d="M98 492c0-66 46-114 102-114s102 48 102 114H98z" fill="#810B38" />
+  <path d="M162 384l38 52 38-52" fill="none" stroke="#DCC3AA" stroke-width="4" stroke-linejoin="round" />
+  <rect x="44" y="42" width="312" height="44" rx="8" fill="#810B38" fill-opacity="0.08" />
+  <text x="200" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#810B38">PAS FOTO 4×6 · MOJANG · DUMMY</text>
+  <text x="200" y="544" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#76564E">Contoh Ilustratif Latar Putih · Bukan Dokumen Nyata</text>
+</svg>
